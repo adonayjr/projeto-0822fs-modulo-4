@@ -1,31 +1,24 @@
 @import url("https://meyerweb.com/eric/tools/css/reset/reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Open+Sans:wght@400;600;700;800&display=swap');
-
-/*
-Cores: 1e1e1e, 136df3, d2d2d2, c39a05, f3f61, d2d2d2
-Fonte: Open Sans
-Pesos: extrabold, bold, semibol e regular
-Dimensões: 5rem, 4rem, 3rem, 2.5rem, 1rem 
-*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Open+Sans:wght@400;600;700;800&display=swap");
 
 :root {
-    --grey: #1e1e1e;
-    --white: #d2d2d2;
-    --blue: #136df3;
-    --yellow: #c39a05;
-    --pink: #f31f61;
+  --grey: #1e1e1e;
+  --white: #d2d2d2;
+  --blue: #136df3;
+  --yellow: #c39a05;
+  --pink: #f31f61;
 
-    --size_xg: 5rem;
-    --size_lg: 4rem;
-    --size_md: 3rem;
-    --size_sm: 2.5rem;
-    --size_xs: 1rem;
+  --size_xl: 5rem;
+  --size_lg: 4rem;
+  --size_md: 3rem;
+  --size_sm: 2.5rem;
+  --size_xs: 1rem;
 
-    --font_family: "Open Sans";
-    --font_extrabold: 800;
-    --font_bold: 700;
-    --font_semibold: 600;
-    --font_regular: 500;
+  --font_family: "Open Sans";
+  --font_extrabold: 800;
+  --font_bold: 700;
+  --font_semibold: 600;
+  --font_regular: 500;
 }
 
 /* Cores */
@@ -33,6 +26,74 @@ h1 em{
     background: linear-gradient(#136DF3 0%, #F30F61 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#header {
+  background-color: var(--white);
+}
+
+.header_title > em {
+  background-image: linear-gradient(to bottom, var(--blue), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header_title {
+  color: var(--grey);
+}
+
+.header_text {
+  color: var(--grey);
+}
+
+#project .article_title {
+  color: var(--yellow);
+}
+
+#project .article_text {
+  color: var(--white);
+}
+
+#responsiveness {
+  background-color: var(--pink);
+}
+
+#responsiveness .article_title,
+#responsiveness .article_text {
+  color: var(--white);
+}
+
+#foundations {
+  background-color: var(--white);
+}
+
+#foundations .article_title {
+  color: var(--blue);
+}
+
+#foundations .article_text {
+  color: var(--grey);
+}
+
+#foundations .article_illustration > img {
+  border-color: var(--blue);
+}
+
+#others {
+  background-color: var(--yellow);
+}
+
+#others .article_title {
+  color: var(--white);
+}
+
+#others .article_text {
+  color: var(--grey);
+}
+
+.footer {
+  background-color: var(--grey);
+  color: var(--white);
 }
 
 /* Tipografia */
@@ -48,6 +109,43 @@ h1 em{
     height: 600;
     size: 64px;
     line-height: 64px;
+}
+
+body * {
+  font-family: var(--font_family);
+}
+
+.header_title {
+  font-size: var(--size_lg);
+  font-weight: var(--font_semibold);
+}
+
+.header_title em {
+  font-size: var(--size_xl);
+  font-weight: var(--font_bold);
+}
+
+.header_text {
+  font-size: var(--size_xs);
+  font-weight: var(--font_regular);
+}
+
+.article_title {
+  font-weight: var(--font_extrabold);
+  font-size: var(--size_lg);
+}
+
+#others .article_title {
+  font-size: var(--size_md);
+}
+
+.article_text, .footer * {
+  font-weight: var(--font_regular);
+  font-size: var(--size_xs);
+}
+
+.article_title + .article_text, .footer_text, .copyright {
+  font-weight: var(--font_bold);
 }
 
 /* Estilo */
